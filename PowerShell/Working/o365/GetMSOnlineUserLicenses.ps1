@@ -20,7 +20,7 @@ Key requirements for this script:
 
 Sample command to set a MS Online account password not to expire:
 
-Set-MsolUser –UserPrincipalName UserName@YourDomain.onmicrosoft.com -PasswordNeverExpires $True
+Set-MsolUser ï¿½UserPrincipalName UserName@YourDomain.onmicrosoft.com -PasswordNeverExpires $True
 
 Script Resource: http://gallery.technet.microsoft.com/scriptcenter/Export-a-Licence-b200ca2a#content
 
@@ -115,7 +115,7 @@ foreach ($license in $licensetype)
 			$datastring = ($datastring + "," + $($row.provisioningstatus))
 			}
 		
-		Out-File -FilePath $LogFile -InputObject $datastring -Encoding UTF8
+		Out-File -FilePath $LogFile -InputObject $datastring -Encoding UTF8 -- Append
 		
 	}
 }			
