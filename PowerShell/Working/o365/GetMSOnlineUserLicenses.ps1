@@ -115,7 +115,7 @@ foreach ($license in $licensetype)
 			$datastring = ($datastring + "," + $($row.provisioningstatus))
 			}
 		
-		Out-File -FilePath $LogFile -InputObject $datastring -Encoding UTF8 -- Append
+		Out-File -FilePath $LogFile -InputObject $datastring -Encoding UTF8 -Append
 		
 	}
 }			
